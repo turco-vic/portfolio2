@@ -1,0 +1,144 @@
+.pageHeader {
+  padding-top: 9rem;
+  padding-bottom: 4rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.eyebrow {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.pageTitle {
+  font-size: clamp(3rem, 9vw, 7rem);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 2rem;
+}
+
+.pageTitle em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.pageDesc {
+  font-size: 1.15rem;
+  color: var(--fg-muted);
+  max-width: 60ch;
+  line-height: 1.6;
+}
+
+.section {
+  padding-block: var(--section-py);
+}
+
+.filters {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 3rem;
+  flex-wrap: wrap;
+}
+
+.filterBtn {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.6rem 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 100px;
+  color: var(--fg-muted);
+  transition: all 0.3s var(--ease);
+}
+
+.filterBtn:hover {
+  border-color: var(--border-strong);
+  color: var(--fg);
+}
+
+.filterBtnActive {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 2.5rem;
+}
+
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.4s var(--ease);
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+.cardImage {
+  aspect-ratio: 4/3;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 1.25rem;
+  overflow: hidden;
+  position: relative;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 3rem;
+  color: var(--fg-subtle);
+}
+
+.cardImage::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    135deg,
+    transparent 60%,
+    color-mix(in srgb, var(--accent) 12%, transparent)
+  );
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.card:hover .cardImage::after {
+  opacity: 1;
+}
+
+.cardImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.cardMeta {
+  display: flex;
+  justify-content: space-between;
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.cardTitle {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
+}
+
+.cardDesc {
+  font-size: 0.95rem;
+  color: var(--fg-muted);
+  line-height: 1.5;
+}

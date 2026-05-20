@@ -1,0 +1,251 @@
+.wrapper {
+  padding-top: 8rem;
+  padding-bottom: var(--section-py);
+}
+
+.backLink {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-muted);
+  margin-bottom: 3rem;
+  transition: color 0.3s var(--ease);
+}
+
+.backLink:hover {
+  color: var(--fg);
+}
+
+.backLink svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--ease);
+}
+
+.backLink:hover svg {
+  transform: translateX(-3px);
+}
+
+.header {
+  margin-bottom: 4rem;
+  padding-bottom: 3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.category {
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.title {
+  font-size: clamp(2.5rem, 7vw, 5.5rem);
+  font-weight: 300;
+  line-height: 1;
+  margin-bottom: 1.5rem;
+  letter-spacing: -0.02em;
+}
+
+.title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.lead {
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
+  color: var(--fg-muted);
+  line-height: 1.5;
+  max-width: 60ch;
+}
+
+.info {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 2rem;
+  margin: 3rem 0;
+  padding: 2rem 0;
+  border-block: 1px solid var(--border);
+}
+
+.infoItem .label {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.infoItem .value {
+  font-size: 1rem;
+  color: var(--fg);
+  font-weight: 500;
+}
+
+.heroImage {
+  aspect-ratio: 16/9;
+  background-color: var(--bg-alt);
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  margin-bottom: 4rem;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-display);
+  font-style: italic;
+  font-size: 5rem;
+  color: var(--fg-subtle);
+  overflow: hidden;
+}
+
+.heroImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.body {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.body :global(h3) {
+  font-size: 1.75rem;
+  margin-block: 2.5rem 1rem;
+  font-weight: 400;
+  font-family: var(--font-display);
+}
+
+.body :global(p) {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 1.25rem;
+  color: var(--fg);
+}
+
+.body :global(ul) {
+  margin-bottom: 1.5rem;
+  padding-left: 1.5rem;
+}
+
+.body :global(li) {
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin-bottom: 0.5rem;
+}
+
+.links {
+  display: flex;
+  gap: 1rem;
+  margin-top: 3rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+  flex-wrap: wrap;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  transition: all 0.3s var(--ease);
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.btnPrimary {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.btnPrimary:hover {
+  background-color: transparent;
+  color: var(--fg);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--ease);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+.nav {
+  margin-top: 6rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.navItem {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 4px;
+  transition: border-color 0.3s var(--ease), transform 0.3s var(--ease);
+}
+
+.navItem:hover {
+  border-color: var(--border-strong);
+  transform: translateY(-2px);
+}
+
+.navItem.next {
+  text-align: right;
+}
+
+.navItem .direction {
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--fg-subtle);
+  margin-bottom: 0.5rem;
+}
+
+.navItem .name {
+  font-family: var(--font-display);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.notFound {
+  padding: 4rem 0;
+  text-align: center;
+}
+
+.notFound h1 {
+  font-family: var(--font-display);
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.notFound p {
+  color: var(--fg-muted);
+  margin-bottom: 2rem;
+}
+
+@media (max-width: 900px) {
+  .nav {
+    grid-template-columns: 1fr;
+  }
+}

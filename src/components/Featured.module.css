@@ -1,0 +1,131 @@
+.featured {
+  padding-block: var(--section-py);
+}
+
+.sectionHead {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 1.5rem;
+  align-items: baseline;
+  margin-bottom: 4rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.sectionHead .num {
+  font-family: var(--font-mono);
+  font-size: 0.85rem;
+  color: var(--fg-subtle);
+}
+
+.sectionHead .title {
+  font-size: clamp(2.5rem, 6vw, 4.5rem);
+  font-weight: 300;
+}
+
+.sectionHead .title em {
+  font-style: italic;
+  color: var(--accent);
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: auto 1fr auto auto;
+  gap: 2rem;
+  align-items: center;
+  padding: 2rem 0;
+  border-bottom: 1px solid var(--border);
+  transition: padding 0.4s var(--ease);
+  position: relative;
+}
+
+.item:first-child {
+  border-top: 1px solid var(--border);
+}
+
+.item:hover {
+  padding-inline: 1rem;
+}
+
+.itemNum {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-subtle);
+}
+
+.itemTitle {
+  font-family: var(--font-display);
+  font-size: clamp(1.5rem, 3vw, 2.25rem);
+  font-weight: 400;
+}
+
+.itemYear {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  color: var(--fg-muted);
+}
+
+.arrow {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 1px solid var(--border);
+  display: grid;
+  place-items: center;
+  transition: all 0.3s var(--ease);
+}
+
+.item:hover .arrow {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+  transform: rotate(-45deg);
+}
+
+.cta {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid var(--border-strong);
+  border-radius: 100px;
+  transition: all 0.3s var(--ease);
+  background-color: transparent;
+}
+
+.btn:hover {
+  background-color: var(--fg);
+  color: var(--bg);
+  border-color: var(--fg);
+}
+
+.btn svg {
+  width: 14px;
+  height: 14px;
+  transition: transform 0.3s var(--ease);
+}
+
+.btn:hover svg {
+  transform: translateX(3px);
+}
+
+@media (max-width: 900px) {
+  .item {
+    grid-template-columns: auto 1fr auto;
+  }
+  .itemYear {
+    display: none;
+  }
+}
