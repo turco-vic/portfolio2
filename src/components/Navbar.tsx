@@ -27,7 +27,7 @@ export function Navbar() {
     <nav className={`${styles.nav} ${scrolled ? styles.scrolled : ''}`}>
       <div className={`container ${styles.inner}`}>
         <Link to="/" className={styles.logo}>
-          S<span>.</span>
+          E<span>.</span>
         </Link>
 
         <ul className={`${styles.links} ${menuOpen ? styles.linksOpen : ''}`}>

@@ -2,9 +2,8 @@ import { Reveal } from './Reveal';
 import styles from './Contact.module.css';
 
 const SOCIALS = [
-  { name: 'GitHub', url: 'https://github.com/seu-usuario' },
-  { name: 'LinkedIn', url: 'https://linkedin.com/in/seu-perfil' },
-  { name: 'Twitter', url: 'https://twitter.com/seu-usuario' },
+  { name: 'GitHub', url: 'https://github.com/turco-vic' }, // Cole aqui o link do seu GitHub
+  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/enzoturcovic/' }, // Cole aqui o link do seu LinkedIn
 ];
 
 const ArrowOut = () => (
@@ -29,14 +28,16 @@ export function Contact() {
 
         <Reveal delay={0.1}>
           <div className={styles.inner}>
-            <h3 className={styles.heading}>
-              Tem uma <em>ideia</em>
-              <br />
-              em mente?
-            </h3>
-            <a href="mailto:seu@email.com" className={styles.email}>
-              seu@email.com
-            </a>
+            <div className={styles.leftCol}>
+              <h3 className={styles.heading}>
+                Tem uma <em>ideia</em>
+                <br />
+                em mente?
+              </h3>
+              <a href="mailto:eturcodev@gmail.com" className={styles.email}>
+                eturcodev@gmail.com
+              </a>
+            </div>
 
             <div className={styles.socials}>
               {SOCIALS.map((s) => (

@@ -28,7 +28,13 @@ export function About() {
         <div className={styles.grid}>
           <Reveal>
             <aside className={styles.sidebar}>
-              <div className={styles.avatar}>S</div>
+              <div className={styles.avatar}>
+                <img
+                  src="/images/profile.jpeg"
+                  alt="Enzo Turcovic"
+                  style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+                />
+              </div>
               <div className={styles.tags}>
                 <span className={styles.tag}>Desenvolvedor</span>
                 <span className={styles.tag}>Brasil</span>

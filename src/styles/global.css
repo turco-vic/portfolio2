@@ -5,7 +5,7 @@
   --fg: #1a1a1a;
   --fg-muted: #6b6b6b;
   --fg-subtle: #9a9a9a;
-  --accent: #1e3a8a;
+  --accent: #2563eb;
   --border: rgba(26, 26, 26, 0.12);
   --border-strong: rgba(26, 26, 26, 0.24);
   --card-bg: #ffffff;
@@ -88,10 +88,9 @@ h4 {
 
 ::selection {
   background-color: var(--accent);
-  color: var(--bg);
+  color: #fff;
 }
 
-/* Classes utilitárias globais */
 .container {
   max-width: var(--max-w);
   margin: 0 auto;
